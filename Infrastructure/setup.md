@@ -115,4 +115,4 @@ Access is provided through Azure RBAC permissions.
 
 # Support
 
-If you has trouble accessing the resources or connecting to the database, contact walt0180@algonquinlive.com in Microsoft Teams.
+If you have trouble accessing the resources or connecting to the database, contact walt0180@algonquinlive.com in Microsoft Teams.
