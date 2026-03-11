@@ -124,4 +124,4 @@ Blob Storage
 
 # Support
 
-If you experience connection issues, contact the infrastructure setup member of the team.
+If you has trouble accessing the resources or connecting to the database, contact walt0180@algonquinlive.com in Microsoft Teams.
