@@ -27,7 +27,7 @@ To ensure maximum efficiency, we delegated roles based on the specific pillars o
 * **Risk Mitigation:** We chose a modular design; if the automated ADF pipeline required troubleshooting, the SQL Architect could maintain progress using staged data, ensuring the project remained on schedule.
 * **Visual Impact:** The end goal was a polished Power BI dashboard that provides immediate business insights from raw cloud-staged data.
 
-## Architecture 
+## Diagram 
 
 ```mermaid
 flowchart TD
@@ -45,6 +45,24 @@ flowchart TD
 
     H --> I[Power BI Dashboard]
 ```
-
-
+### Explanation of Flow
+- shopping_trends.csv is the source dataset.
+- The file gets uploaded to Azure Blob Storage.
+- Azure Data Factory (ADF) reads the file from Blob Storage.
+- ADF copies the raw data into Azure SQL Database.
+- The raw data first goes into dbo.raw_customer_purchases.
+- Then the raw table is converted into normalized tables:
+    - dbo.customers
+    - dbo.products
+    - dbo.purchases
+- After that, SQL views are created for reporting.
+- The SQL views summarize the data by:
+    - location
+    - category
+    - season
+    - gender
+    - payment method
+- Power BI connects to these SQL views.
+- The final result is an interactive dashboard for business insights.
+- RBAC and firewall rules help secure access to the Azure resources.
 ---
